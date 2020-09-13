@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    height: 100vh;
+    background-color:black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mouse{
+    width: 100px;
+    height: 180px;
+    border: 3px solid #fff;
+    border-radius: 48px;
+    position: relative;
+}
+.mouse::before{
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 30px;
+    background-color: #fff;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50px;
+    animation: scroll 1s infinite;
+}
+@keyframes scroll{
+    from{
+        opacity: 1;
+        top: 30px;
+    }
+    to{
+        opacity: 0;
+        top: 140px;
+    }
+}
